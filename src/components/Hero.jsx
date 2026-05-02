@@ -4,11 +4,11 @@ import s from './Hero.module.css';
 export default function Hero() {
   return (
     <section className={s.hero} id="hero">
-      <p className={`${s.eyebrow} reveal`}>PORTFOLIO · 2026</p>
+      {/* <p className={`${s.eyebrow} reveal`}>PORTFOLIO · 2026</p> */}
 
       <h1 className={`${s.title} reveal d1`}>
         Hi, I'm <span className="gradient-name">Rasleen</span>.<br />
-        A frontend<br />engineer.
+        A software<br />engineer.
       </h1>
 
       <p className={`${s.sub} reveal d2`}>

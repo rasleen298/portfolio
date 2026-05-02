@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 10rem 3rem 5rem;
-  max-width: 900px;
+  max-width: 1100px;
 }
 .eyebrow {
   font-family: var(--sans);
@@ -17,12 +17,14 @@
 .title {
   font-family: var(--serif);
   font-size: clamp(3.5rem, 8vw, 7.5rem);
-  font-weight: 600;
-  line-height: 1.05;
+  font-weight: 500; 
+  line-height: 1.0; 
   letter-spacing: -0.02em;
   color: var(--text);
   margin-bottom: 2rem;
 }
+ /* font-weight: 500; //600
+  line-height: 1.0; //1.05 */
 .sub {
   font-family: var(--sans);
   font-size: 1rem;

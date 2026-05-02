@@ -22,8 +22,8 @@ export default function Contact() {
             Let's build<br />
             <span className={s.gradientText}>something quiet.</span>
           </h2>
-          <a href="mailto:rasleen@example.com" className={`${s.email} reveal d2`}>
-            rasleen@example.com
+          <a href="mailto:rasleen0209@gmail.com" className={`${s.email} reveal d2`}>
+            rasleen0209@gmail.com
           </a>
         </div>
 
