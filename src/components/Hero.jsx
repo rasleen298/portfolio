@@ -1,0 +1,35 @@
+import React from 'react';
+import s from './Hero.module.css';
+
+export default function Hero() {
+  return (
+    <section className={s.hero} id="hero">
+      <p className={`${s.eyebrow} reveal`}>PORTFOLIO · 2026</p>
+
+      <h1 className={`${s.title} reveal d1`}>
+        Hi, I'm <span className="gradient-name">Rasleen</span>.<br />
+        A frontend<br />engineer.
+      </h1>
+
+      <p className={`${s.sub} reveal d2`}>
+        I design and build dependable software — quiet interfaces,<br />
+        careful systems, and products people return to.
+      </p>
+
+      <div className={`${s.actions} reveal d3`}>
+        <button
+          className={s.btnPrimary}
+          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          EMAIL ME &nbsp;→
+        </button>
+        <button
+          className={s.btnGhost}
+          onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          VIEW WORK
+        </button>
+      </div>
+    </section>
+  );
+}
