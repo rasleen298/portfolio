@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import s from './Navbar.module.css';
 
-const links = ['About', 'Work', 'Projects', 'Contact'];
+const links = ['About', 'Work', 'Projects', 'Blogs', 'Contact'];
 
 function scrollTo(id) {
   document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });

@@ -2,7 +2,7 @@ import React from 'react';
 import s from './About.module.css';
 
 const stats = [
-  { value: '7+', label: 'YEARS BUILDING PRODUCTS' },
+  { value: '5+', label: 'YEARS BUILDING PRODUCTS' },
   { value: '50+', label: 'SHIPPED FEATURES' },
   { value: '∞', label: 'CUPS OF COFFEE' },
 ];

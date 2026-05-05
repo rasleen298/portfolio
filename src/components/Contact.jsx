@@ -2,9 +2,9 @@ import React from 'react';
 import s from './Contact.module.css';
 
 const socials = [
-  { label: 'LINKEDIN', href: '#' },
-  { label: 'GITHUB', href: '#' },
-  { label: 'TWITTER', href: '#' },
+  { label: 'LINKEDIN', href: 'https://www.linkedin.com/in/rasleen298' },
+  { label: 'GITHUB', href: 'https://www.github.com/rasleen298' },
+  // { label: 'TWITTER', href: '#' },
 ];
 
 export default function Contact() {
@@ -17,11 +17,12 @@ export default function Contact() {
         <div className={`${s.blob} ${s.blob2}`} aria-hidden="true" />
 
         <div className={s.content}>
-          <p className={`${s.tag} reveal`}>04 — CONTACT</p>
+          <p className={`${s.tag} reveal`}>05 — CONTACT</p>
           <h2 className={`${s.heading} reveal d1`}>
             Let's build<br />
-            <span className={s.gradientText}>something quiet.</span>
+            <span className={s.gradientText}>something together.</span>
           </h2>
+          {/* <p className={`${s.tag} reveal d1`} >Reach me at</p> */}
           <a href="mailto:rasleen0209@gmail.com" className={`${s.email} reveal d2`}>
             rasleen0209@gmail.com
           </a>

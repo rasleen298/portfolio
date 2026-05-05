@@ -59,7 +59,7 @@
   font-family: var(--sans);
   font-size: 0.6rem;
   letter-spacing: 0.1em;
-  color: var(--muted2);
+  color: var(--muted1);
   font-weight: 400;
 }
 @media (max-width: 768px) {

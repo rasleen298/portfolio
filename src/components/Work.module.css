@@ -45,9 +45,9 @@
   grid-template-columns: 48px 1fr;
   gap: 1rem;
   padding: 2.5rem 0;
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
 }
-.item:first-child { border-top: 1px solid var(--border); }
+/* .item:first-child { } .item:first-child { border-top: 1px solid var(--border); } */
 .num {
   font-family: var(--sans);
   font-size: 0.75rem;
