@@ -137,6 +137,7 @@
   font-weight: 500;
   color: var(--text);
   margin-bottom: 1rem;
+  
 }
 .screenLines {
   display: flex;
