@@ -280,4 +280,6 @@
   .section { padding: 5rem 1.5rem; }
   .layout { grid-template-columns: 1fr; gap: 3rem; }
   .header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .imageGrid .projectImg:not(:first-child) { display: none; }
+  .imageGrid .imageColumn { display: none; }
 }
