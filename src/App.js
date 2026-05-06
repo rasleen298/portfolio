@@ -30,7 +30,7 @@ export default function App() {
         <About />
         <Work />
         <Projects />
-        <Medium />
+        <Medium headingRequired={true}/>
         <Contact />
       </main>
     </>

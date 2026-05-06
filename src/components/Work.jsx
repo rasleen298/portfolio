@@ -18,7 +18,6 @@ const items = [
     desc: 'Reviewing code, pairing with engineers, and helping the team raise the bar on quality and craft.',
   },
 ];
-
 export default function Work() {
   return (
     <section className={s.section} id="work">
@@ -28,7 +27,7 @@ export default function Work() {
           <div className={s.left}>
             <h2 className={`${s.heading} reveal d1`}>What I do</h2>
             <p className={`${s.sub} reveal d2`}>
-              In my current role as a senior frontend engineer, I focus on
+              In my current role as a senior software engineer, I focus on
               shipping product surfaces that are dependable, observable, and
               easy to evolve.
             </p>

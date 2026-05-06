@@ -1,63 +1,6 @@
 import React, { useState } from 'react';
 import s from './Medium.module.css';
 
-// const blogs = [
-//   {
-//     tag: 'PERFORMANCE',
-//     title: 'How I Cut Bundle Size by 40% Without Changing a Single Feature',
-//     excerpt:
-//       'A deep dive into tree shaking, dynamic imports, and the subtle mistakes most teams make when optimising their Webpack or Vite config.',
-//     date: 'APR 2026',
-//     readTime: '7 min read',
-//     href: '#',
-//   },
-//   {
-//     tag: 'REACT',
-//     title: 'The Right Way to Use useEffect — and When Not To',
-//     excerpt:
-//       'Most bugs I see in production React apps come down to useEffect misuse. Heres a mental model that has saved me countless hours of debugging.',
-//     date: 'MAR 2026',
-//     readTime: '5 min read',
-//     href: '#',
-//   },
-//   {
-//     tag: 'CSS',
-//     title: 'CSS Cascade Layers Are the Feature You\'re Not Using Yet',
-//     excerpt:
-//       'Cascade layers give you explicit control over specificity without resorting to !important hacks. Heres how I restructured an entire design system with them.',
-//     date: 'FEB 2026',
-//     readTime: '6 min read',
-//     href: '#',
-//   },
-//   {
-//     tag: 'ARCHITECTURE',
-//     title: 'Feature Flags at the Frontend: A Practical Guide',
-//     excerpt:
-//       'Rolling out features safely, running A/B tests, and killing old code with confidence — a pattern Ive applied across three different companies.',
-//     date: 'JAN 2026',
-//     readTime: '8 min read',
-//     href: '#',
-//   },
-//   {
-//     tag: 'TYPESCRIPT',
-//     title: 'Typed API Responses Without Losing Your Mind',
-//     excerpt:
-//       'Runtime validation with Zod + static types from TypeScript — a workflow that catches bugs at the boundary before they reach your UI.',
-//     date: 'DEC 2025',
-//     readTime: '6 min read',
-//     href: '#',
-//   },
-//   {
-//     tag: 'DX',
-//     title: 'Why I Stopped Writing Tests Last and Started Writing Them First',
-//     excerpt:
-//       'TDD felt slow until it didnt. A year of practicing test-first development changed how I design components and think about interfaces.',
-//     date: 'NOV 2025',
-//     readTime: '5 min read',
-//     href: '#',
-//   },
-// ];
-
 const blogs = [
      {
     tag: 'JAVASCRIPT',
@@ -93,16 +36,18 @@ const tagColors = {
   TYPESCRIPT:  { bg: 'rgba(129,140,248,0.1)', color: '#4338ca' },
   DX:          { bg: 'rgba(74,222,128,0.1)',  color: '#16a34a' },
   JAVASCRIPT:  { bg: 'rgba(129,140,248,0.1)', color: '#0d9488' },
+  PROFESSIONAL: { bg: 'rgba(129,140,248,0.1)', color: '#4338ca' },
 };
 
-export default function Medium() {
+export default function Medium({headingRequired}) {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section className={s.section} id="blogs">
+    <section className={headingRequired ? s.section : s.section_one} id="blogs">
       <div className={s.inner}>
 
         {/* Header */}
+        {headingRequired && (
         <div className={s.header}>
           <div>
             <span className={`${s.sectionTag} reveal`}>04 — BLOGS</span>
@@ -117,6 +62,8 @@ export default function Medium() {
             VIEW ALL ON MEDIUM ↗
           </a>
         </div>
+        )}
+        
 
         {/* Grid */}
         <div className={s.grid}>
@@ -125,7 +72,7 @@ export default function Medium() {
             return (
               <a
                 key={i}
-                href={blog.href}
+                href={headingRequired ? blog.href : null}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${s.card} reveal`}
@@ -150,13 +97,15 @@ export default function Medium() {
                 </h3>
 
                 {/* Excerpt */}
-                <p className={s.excerpt}>{blog.excerpt}</p>
+                <p className={headingRequired ? s.excerpt : s.excerpt_one}>{blog.excerpt}</p>
 
                 {/* Footer */}
+                {headingRequired && (
                 <div className={s.cardFoot}>
                   <span className={s.readTime}>{blog.readTime}</span>
                   <span className={`${s.arrow} ${hovered === i ? s.arrowHovered : ''}`}>↗</span>
                 </div>
+                )}   
               </a>
             );
           })}
