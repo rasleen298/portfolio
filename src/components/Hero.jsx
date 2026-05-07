@@ -33,9 +33,9 @@ export default function Hero() {
         >
           EMAIL ME &nbsp;→
         </button>
-        <a className={s.btnPrimary} href={cvFile} download="CV_RasleenKaur.pdf">
+        {/* <a className={s.btnPrimary} href={cvFile} download="CV_RasleenKaur.pdf">
           DOWNLOAD CV &nbsp;→
-        </a>
+        </a> */}
         <button
           className={s.btnGhost}
           onClick={() =>
