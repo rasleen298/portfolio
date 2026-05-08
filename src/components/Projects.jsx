@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import s from "./Projects.module.css";
 import img1 from "../images/Simulator Screenshot - iPhone 17 Pro - 2026-05-05 at 14.16.06.png";
 import img2 from "../images/Simulator Screenshot - iPhone 17 Pro - 2026-05-05 at 14.23.50.png";
@@ -16,7 +17,7 @@ const projects = [
     stack: ["REACT NATIVE", "TYPESCRIPT", "SUPABASE", "SQLITE", "EXPO"], //'CLAUDE AI','LOVABLE AI'
     aiCompanions: ["Claude", "Lovable"],
     gradient: "linear-gradient(135deg, #a78bfa, #60a5fa, #34d399)",
-    links: [{ label: "READ MORE ↗", href: "#" }], //{ label: 'PLAY STORE ↗', href: '#' },
+    links: [{ label: "READ MORE ↗", href: "/bloomlog", internal: true }], //{ label: 'PLAY STORE ↗', href: '#' },
     img1: img1,
     img2: img2,
     img3: img3,
@@ -139,21 +140,33 @@ export default function Projects() {
             </div> */}
 
             <div className={s.infoActions}>
-              {project.links.map((l) => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className={
-                    l.label.includes("LIVE") ||
-                    l.label.includes("NPM") ||
-                    l.label.includes("CHROME")
-                      ? s.btnPrimary
-                      : s.btnGhost
-                  }
-                >
-                  {l.label}
-                </a>
-              ))}
+              {project.links.map((l) =>
+                l.internal ? (
+                  <Link
+                    key={l.label}
+                    to={l.href}
+                    className={s.btnGhost}
+                  >
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={l.label}
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={
+                      l.label.includes("LIVE") ||
+                      l.label.includes("NPM") ||
+                      l.label.includes("CHROME")
+                        ? s.btnPrimary
+                        : s.btnGhost
+                    }
+                  >
+                    {l.label}
+                  </a>
+                )
+              )}
             </div>
           </div>
         </div>

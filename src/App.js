@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -7,9 +8,9 @@ import Work from './components/Work';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Medium from './components/Medium';
+import BloomLog from './components/BloomLog';
 
-export default function App() {
-  // Scroll reveal
+function Home() {
   useEffect(() => {
     const els = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver(
@@ -34,5 +35,16 @@ export default function App() {
         <Contact />
       </main>
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/bloomlog" element={<BloomLog />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
