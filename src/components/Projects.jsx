@@ -7,6 +7,7 @@ import img3 from "../images/AiInsight1.png";
 import img4 from "../images/AiInsight2.png";
 import img5 from "../images/PTSS.png";
 import img6 from "../images/upsc.png";
+import {useInView} from 'react-intersection-observer';
 
 const projects = [
   {
@@ -65,6 +66,7 @@ const projects = [
 export default function Projects() {
   const [active, setActive] = useState(0);
   const project = projects[active];
+  const [ref,inView] = useInView(); //pass optional threshold value if required
 
   const increment = () =>
     setActive((prev) => (prev + 1) % projects.length || 0);
@@ -83,9 +85,9 @@ export default function Projects() {
           </span> */}
         </div>
 
-        <div className={s.layout}>
-          {/* Left: project images */}
-          <div className={`${s.visual} reveal d2`}>
+        <div className={s.layout} >
+          <div className={`${s.visual} reveal d2`} ref={ref}>
+          {inView ? (
             <div className={s.imageGrid}>
               {project.img1 ? (
                 <img
@@ -118,6 +120,7 @@ export default function Projects() {
                 ) : null}
               </div>
             </div>
+          ) : null}
           </div>
 
           {/* Right: info */}

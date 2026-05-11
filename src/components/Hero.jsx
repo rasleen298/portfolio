@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Hero.module.css";
-import cvFile from "../CV/CV_RasleenKaur.pdf";
+// import cvFile from "../CV/CV_RasleenKaur.pdf";
 
 export default function Hero() {
   return (

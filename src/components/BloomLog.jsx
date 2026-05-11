@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import s from "./BloomLog.module.css";
 import img1 from "../images/Simulator Screenshot - iPhone 17 Pro - 2026-05-05 at 14.16.06.png";
 import img2 from "../images/Simulator Screenshot - iPhone 17 Pro - 2026-05-05 at 14.23.50.png";
-import img3 from "../images/AiInsight1.png";
-import img4 from "../images/AiInsight2.png";
+
 
 const stack = ["REACT NATIVE", "TYPESCRIPT","OPENAI", "SUPABASE", "SQLITE", "EXPO"];
 
@@ -42,7 +41,7 @@ const features = [
 ];
 
 export default function BloomLog() {
-  const [videoPlaying, setVideoPlaying] = useState(false);
+  // const [videoPlaying, setVideoPlaying] = useState(false);
   const navigate = useNavigate();
   const onBack = () => navigate("/");
 
