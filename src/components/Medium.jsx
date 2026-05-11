@@ -3,12 +3,12 @@ import s from './Medium.module.css';
 
 const blogs = [
      {
-    tag: 'JAVASCRIPT',
-    title: 'Simplifying Asynchronous JavaScript: The Promises vs. Async/Await Debate',
-    excerpt:'A conceptual article showing the differences in Promises and Async/Await, insights to write cleaner code and visualizing in Debugger Console',
+    tag: 'PERFORMANCE',
+    title: 'Exploring Intersection observer API in React',
+    excerpt:'A guide to implementing one of the performance optimization techniques in React for lazy loading, infinite scroll, and performant applications',
     date: 'APR 2026',
-    readTime: '5 min read',
-    href: 'https://medium.com/javascript-in-plain-english/simplifying-asynchronous-javascript-the-promises-vs-async-await-debate-905c679fff01',
+    readTime: '4 min read',
+    href: 'https://medium.com/javascript-in-plain-english/exploring-intersection-observer-api-in-react-9c0dbad4b085',
   }, 
     {
     tag: 'REACT',
@@ -18,15 +18,14 @@ const blogs = [
     readTime: '5 min read',
     href: 'https://medium.com/javascript-in-plain-english/a-comprehensive-guide-to-using-graphql-with-react-native-aa7a3855c1a0',
   },
-  {
+    {
     tag: 'JAVASCRIPT',
-    title: 'How to Store Login Sessions with LocalStorage and SessionStorage',
-    excerpt:
-      'Save Current LoggedIn user in SessionStorage and information of all the users from LocalStorage, all using plain JavaScript!',
+    title: 'Simplifying Asynchronous JavaScript: The Promises vs. Async/Await Debate',
+    excerpt:'A conceptual article showing the differences in Promises and Async/Await, insights to write cleaner code and visualizing in Debugger Console',
     date: 'APR 2026',
-    readTime: '4 min read',
-    href: 'https://medium.com/javascript-in-plain-english/implementing-login-case-using-localstorage-and-sessionstorage-bfddce5d2198',
-  },
+    readTime: '5 min read',
+    href: 'https://medium.com/javascript-in-plain-english/simplifying-asynchronous-javascript-the-promises-vs-async-await-debate-905c679fff01',
+  }, 
 ]
 const tagColors = {
   PERFORMANCE: { bg: 'rgba(45,212,191,0.1)', color: '#4338ca' },
