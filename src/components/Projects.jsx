@@ -34,8 +34,8 @@ const projects = [
     gradient: "linear-gradient(135deg, #f9a8d4, #fb923c, #fbbf24)",
     links: [
       {
-        label: "Play Store ↗",
-        href: "https://play.google.com/store/apps/details?id=com.poshantracker&hl=en_IN&pli=1",
+        label: "READ MORE ↗",
+        href: "https://www.poshantracker.in/",
       },
     ],
     img1: img5,

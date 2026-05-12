@@ -79,14 +79,14 @@ export default function BloomLog() {
               ))}
             </div>
             <div className={s.heroActions}>
-              <a
+                {/* <a
                 href="https://drive.google.com/drive/folders/161EGYD_avY5AxqTZ_3A7Mi9SNsPBpyIX?usp=sharing"
                 className={s.btnPrimary}
 
               >
                 WATCH DEMO ↗
               </a>
-              {/* <a href="#" className={s.btnGhost}>
+            <a href="#" className={s.btnGhost}>
                 APP STORE ↗
               </a>
               <a href="#" className={s.btnGhost}>
