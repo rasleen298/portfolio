@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Navbar from './components/Navbar';
@@ -8,8 +8,8 @@ import Work from './components/Work';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Medium from './components/Medium';
-import BloomLog from './components/BloomLog';
 
+const BloomLog = lazy(() => import('./components/BloomLog'))
 function Home() {
   useEffect(() => {
     const els = document.querySelectorAll('.reveal');
@@ -43,7 +43,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/bloomlog" element={<BloomLog />} />
+        <Route path="/bloomlog" element={<React.Suspense fallback={<div>Loading...</div>}><BloomLog /></React.Suspense>} />
       </Routes>
     </BrowserRouter>
   );
