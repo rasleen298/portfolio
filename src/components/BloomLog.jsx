@@ -4,8 +4,14 @@ import s from "./BloomLog.module.css";
 import img1 from "../images/Simulator Screenshot - iPhone 17 Pro - 2026-05-05 at 14.16.06.png";
 import img2 from "../images/Simulator Screenshot - iPhone 17 Pro - 2026-05-05 at 14.23.50.png";
 
-
-const stack = ["REACT NATIVE", "TYPESCRIPT","OPENAI", "SUPABASE", "SQLITE", "EXPO"];
+const stack = [
+  "REACT NATIVE",
+  "TYPESCRIPT",
+  "OPENAI",
+  "SUPABASE",
+  "SQLITE",
+  "EXPO",
+];
 
 const features = [
   {
@@ -40,6 +46,32 @@ const features = [
   },
 ];
 
+const whyTheseTools = [
+  {
+    tech: "React Native + Expo",
+    why: "Single codebase for iOS and Android. Expo's managed workflow meant faster iteration without native build headaches.",
+  },
+  {
+    tech: "TypeScript",
+    why: "End-to-end type safety across components, Supabase queries, and SQLite schemas caught bugs before they ever hit production.",
+  },
+  {
+    tech: "SQLite (offline first)",
+    why: "Local persistence ensures the app works without internet. SQLite is battle-tested, fast, and fits perfectly in a mobile context.",
+  },
+  {
+    tech: "Supabase Authentication",
+    why: "Handled user Login and Signup via Auth Table, which is handled by postgres service.",
+  },
+  {
+    tech: "Supabase Database - Postgres and SQLite",
+why: "Handled auth, real-time sync, and row-level security out of the box. Replaced what would have been weeks of backend work.",
+  },
+  {
+    tech: "Supabase Cloud (and Buckets)",
+        why: "Created buckets for Images and Audio storage, for storing compressed files upto 1MB for each journal entry. Managed entries and prompts tables.",
+  },
+];
 export default function BloomLog() {
   // const [videoPlaying, setVideoPlaying] = useState(false);
   const navigate = useNavigate();
@@ -68,8 +100,8 @@ export default function BloomLog() {
               declutter the mind and encourage daily reflection. A private daily
               journal where you write, track your mood, and watch your streak
               grow. AI provides weekly insights over a pattern of your entries.
-              Features Offline Storage as well as Supabase server syncing
-              for saving the diary forever.
+              Features Offline Storage as well as Supabase server syncing for
+              saving the diary forever.
             </p>
             <div className={s.stackRow}>
               {stack.map((t) => (
@@ -79,7 +111,7 @@ export default function BloomLog() {
               ))}
             </div>
             <div className={s.heroActions}>
-                {/* <a
+              {/* <a
                 href="https://drive.google.com/drive/folders/161EGYD_avY5AxqTZ_3A7Mi9SNsPBpyIX?usp=sharing"
                 className={s.btnPrimary}
 
@@ -196,24 +228,7 @@ export default function BloomLog() {
           <p className={s.sectionEyebrow}>TECHNICAL DECISIONS</p>
           <h2 className={s.sectionHeading}>Why these tools.</h2>
           <div className={s.techGrid}>
-            {[
-              {
-                tech: "React Native + Expo",
-                why: "Single codebase for iOS and Android. Expo's managed workflow meant faster iteration without native build headaches.",
-              },
-              {
-                tech: "TypeScript",
-                why: "End-to-end type safety across components, Supabase queries, and SQLite schemas caught bugs before they ever hit production.",
-              },
-              {
-                tech: "SQLite (offline first)",
-                why: "Local persistence ensures the app works without internet. SQLite is battle-tested, fast, and fits perfectly in a mobile context.",
-              },
-              {
-                tech: "Supabase",
-                why: "Handled auth, real-time sync, and row-level security out of the box. Replaced what would have been weeks of backend work.",
-              },
-            ].map((item, i) => (
+            {whyTheseTools.map((item, i) => (
               <div key={i} className={s.techCard}>
                 <h3 className={s.techName}>{item.tech}</h3>
                 <p className={s.techWhy}>{item.why}</p>
@@ -228,7 +243,8 @@ export default function BloomLog() {
         <div className={s.sectionInner}>
           <h2 className={s.ctaHeading}>Try BloomLog.</h2>
           <p className={s.ctaDesc}>
-            Available soon on iOS and Android. Free to download, private by design.
+            Available soon on iOS and Android. Free to download, private by
+            design.
           </p>
           <div className={s.ctaActions}>
             {/* <a href="#" className={s.btnPrimary}>
